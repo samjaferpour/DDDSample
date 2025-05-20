@@ -7,8 +7,11 @@ namespace Domain.Products.Entities
         public Guid Id { get; private set; }
         public string Name { get; private set; }
         public Money Price { get; private set; }
-        public Category Category { get; private set; }
+        internal Category Category { get; private set; }
 
+        // Public accessors for Category properties
+        public string CategoryName => Category.Name;
+        public string CategoryCreator => Category.Creator;
 
         public Product(string name, Money price, string categoryName, string categoryCreator)
         {

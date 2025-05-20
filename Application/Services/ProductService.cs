@@ -58,8 +58,8 @@ namespace Application.Services
                     Id = x.Id,
                     Name = x.Name,
                     Price = x.Price.Amount,
-                    CategoryName = x.Category.Name,
-                    CategoryCreator = x.Category.Creator
+                    CategoryName = x.CategoryName,
+                    CategoryCreator = x.CategoryCreator
                 })
                 .ToList();
         }
@@ -72,8 +72,8 @@ namespace Application.Services
                 Id = product.Id,
                 Name = product.Name,
                 Price = product.Price.Amount,
-                CategoryName = product.Category.Name,
-                CategoryCreator = product.Category.Creator
+                CategoryName = product.CategoryName,
+                CategoryCreator = product.CategoryCreator
             };
         }
 

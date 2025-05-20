@@ -1,12 +1,12 @@
 ﻿namespace Domain.Products.Entities
 {
-    public class Category
+    internal class Category
     {
-        public string Name { get; private set; }
-        public string Creator { get; private set; }
+        internal string Name { get; private set; }
+        internal string Creator { get; private set; }
 
 
-        public Category(string name, string creator)
+        internal Category(string name, string creator)
         {
             SetName(name);
             SetCreator(creator);
