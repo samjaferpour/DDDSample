@@ -10,8 +10,20 @@ namespace Domain.Products.Entities
         internal Category Category { get; private set; }
 
         // Public accessors for Category properties
-        public string CategoryName => Category.Name;
-        public string CategoryCreator => Category.Creator;
+        public string CategoryName
+        {
+            get
+            {
+                return Category.Name;
+            }
+        }
+        public string CategoryCreator
+        {
+            get
+            {
+                return Category.Creator;
+            }
+        }
 
         public Product(string name, Money price, string categoryName, string categoryCreator)
         {
@@ -45,7 +57,7 @@ namespace Domain.Products.Entities
             Name = name;
         }
 
-        private void SetPrice(Money price) 
+        private void SetPrice(Money price)
         {
             if (price == null)
                 throw new ArgumentNullException(nameof(price), "Price cannot be null.");
